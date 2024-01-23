@@ -100,19 +100,34 @@ p {
   align-items: center;
 }
 
+.top-left span:nth-of-type(1):hover {
+  color: red;
+
+  cursor: pointer;
+
+}
+
+
+#fill-heart {
+  display: none;
+  fill: red;
+}
+
 .icons_heart {
   margin-left: 12px;
   cursor: pointer;
-  user-select: none;
 
 }
 .icons_comment {
+  margin-top: 5px;
   margin-left: 10px;
+  padding-bottom: 4px;
   cursor: pointer;
   user-select: none;
 
 }
 .icons_dm {
+  margin-top: 5px;
   margin-left: 10px;
   cursor: pointer;
   user-select: none;
@@ -155,6 +170,7 @@ li {
 }
 
 .icons_bookmark {
+  margin-top: 5px;
   margin-right: 20px;
   cursor: pointer;
   user-select: none;
