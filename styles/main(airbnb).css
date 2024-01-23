@@ -1,0 +1,295 @@
+.wrap {
+   background-color: white;
+   width: 80%;
+   max-width: 1920px;
+   margin: 0 auto;
+}
+
+.black-bg {
+   background-color: black;
+   width: 100vw;
+   height: 1000px;
+   left: 0;
+
+   position: absolute;
+   z-index: 1;
+}
+
+/* header ----------------------------------------------- */
+
+header {
+   color: white;
+   text-align: center;
+   padding-top: 20px;
+   position: relative;
+   z-index: 10;
+}
+
+header .gnb {
+   width: 100%;
+   display: grid;
+   grid-template-columns: 300px 1fr 300px;
+   grid-template-rows: auto auto;
+   grid-template-areas: 
+   "logo gnb-menu menu"
+   "search search search"
+   ;
+}
+
+header .gnb .logo {
+   grid-area: logo;
+   margin-left: 10px;
+
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+}
+
+header .gnb .gnb-menu {
+   padding-top: 5px;
+   grid-area: gnb-menu;
+   display: flex;
+   align-items: center;
+
+}
+
+header .gnb .gnb-menu ul {
+   width: 70%;
+   margin: 0 30%;
+
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+}
+
+header .gnb .gnb-menu ul li {
+   font-weight: bold;
+   cursor: pointer;
+   position: relative;
+   
+   padding-bottom: 5px;
+}
+
+header .gnb .gnb-menu ul li:hover {
+   color: lightgray;
+}
+
+header .gnb .gnb-menu ul li:hover::before {
+   content: "";
+   height: 2px;
+   width: 3px;
+   background-color: lightgray;
+   
+   position: absolute;
+   bottom: 0px;
+   left: 50%;
+   transform: translate(-50%, 0);
+}
+
+header .gnb .gnb-menu ul .active:hover {
+   color: white;
+}
+
+header .gnb .gnb-menu ul .active:hover::before {
+   content: "";
+   height: 2px;
+   width: 15px;
+   background-color: white;
+   
+   position: absolute;
+   bottom: 0px;
+   left: 50%;
+   transform: translate(-50%, 0);
+}
+
+header .gnb .gnb-menu ul .active::before {
+   content: "";
+   height: 2px;
+   width: 15px;
+   background-color: white;
+   
+   position: absolute;
+   bottom: 0px;
+   left: 50%;
+   transform: translate(-50%, 0);
+}
+
+header .gnb .menu {
+   grid-area: menu;
+   
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   font-weight: bold;
+   width: 90%;
+   margin-left: 10%;
+}
+
+header .gnb .menu * {
+   cursor: pointer;
+}
+
+header .gnb .menu .menu-hover {
+   padding: 10px 15px;
+   border-radius: 30px;
+   margin: 0px 0px;
+}
+
+header .gnb .menu .menu-hover:hover {
+   background-color: rgba(172, 172, 172, 0.3);
+}
+
+header .gnb .menu .profile {
+   background-color: white;
+   color: gray;
+   width: 60px;
+   padding: 10px 10px;
+   border-radius: 30px;
+   margin-left: 10px;
+
+   display: flex;
+   justify-content: space-around;
+}
+
+header .gnb .search {
+   grid-area: search;
+   width: 70%;
+   margin: 20px auto;
+}
+
+header .gnb .search .searchUl {
+   background-color: white;
+   color: black;
+
+   display: grid;
+   grid-template-columns: 1.5fr 1fr 1fr 1fr;
+   grid-template-rows: 1fr;
+   border-radius: 50px;
+}
+
+header .gnb .search .searchUl li {
+   text-align: left;
+   padding: 20px 70px 20px 50px;
+   font-weight: bold;
+   font-size: 14px;
+   border-radius: 50px;
+   position: relative;
+}
+
+header .gnb .search .searchUl li::after {
+   position: absolute;
+   content: "";
+   width: 1px;
+   height: calc(100% - calc(20px * 2));
+   background-color: lightgray;
+   right: 0;
+   top: 50%;
+   transform: translate(0, -50%);
+}
+
+header .gnb .search .searchUl li:last-of-type::after {
+   display: none;
+}
+
+header .gnb .search .searchUl li:hover {
+   background-color: lightgray;
+
+}
+
+header .gnb .search .searchUl li span {
+   font-size: 12px;
+   color: gray;
+   font-weight: normal;
+}
+
+
+/* notice ---------------------------------------------- */
+
+/* .notice-bg {
+   position: relative;
+   background-color: black;
+   padding: 30px 0;
+} */
+
+.notice {
+   background-color: #ff385c;
+   border-radius: 14px;
+   text-align: center;
+   height: 320px;
+
+   position: relative;
+
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   z-index: 10;
+}
+
+.notice p {
+   font-size: 2rem;
+   color: white;
+   font-weight: bold;
+   line-height: 1.8;
+   margin-bottom: 2rem;
+}
+
+.notice button {
+   border: 1px solid white;
+   padding: 5px 15px;
+   color: white;
+   background-color: inherit;
+   font-weight: bold;
+   border-radius: 8px;
+}
+
+/* main banner ---------------------------------------------- */
+
+.mainBanner {
+   height: 600px;
+   border-radius: 14px;
+   padding-bottom: 30px;
+   
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: flex-end;
+
+   position: relative;
+   z-index: 10;
+
+   background-image: url(../images/airbnb_banner_camp.jpg);
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+}
+
+.mainBanner .content {
+   background-color: rgba(0, 0, 0, 0.5);
+   color: white;
+   text-align: center;
+   padding: 50px 50px;
+   border-radius: 50px;
+}
+
+.mainBanner .content p {
+   font-size: 2rem;
+   font-weight: bold;
+   margin-bottom: 1rem;
+}
+
+.mainBanner .content button {
+   border: 1px solid white;
+   padding: 15px 25px;
+   font-size: 1.2rem;
+   font-weight: bold;
+   border-radius: 35px;
+}
+
+.mainBanner .content button span {
+   font-size: 17px;
+   background: linear-gradient(90deg, #6f019c 0%, #c6017e 135.12%);
+   -webkit-background-clip: -webkit-text;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
